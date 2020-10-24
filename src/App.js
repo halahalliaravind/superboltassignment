@@ -15,7 +15,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/howto" component={() => <div>yo!</div>} />
+          <Route path="/howto" component={() => <div style={{textAlign:'center'}}>Dummy component to check Router</div>} />
           <Route exact path="/myhometosearch/:id">
             <LandingSearch />
           </Route>

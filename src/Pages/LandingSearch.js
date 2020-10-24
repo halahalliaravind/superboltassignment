@@ -3,55 +3,12 @@ import { useParams } from "react-router-dom";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Link from "@material-ui/core/Link";
 import { Toolbar, Typography } from "@material-ui/core";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import MuiAlert from "@material-ui/lab/Alert";
 import Button from "@material-ui/core/Button";
 
 import "./watch.css";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  //   clock: {
-  //     width: "90px",
-  //     height: "90px",
-  //     borderRadius: "50%",
-  //     border: "4px solid #E6AB4A",
-  //     position: "realtive",
-  //   },
-  //   hour: {
-  //     height: "50px",
-  //     width: "4px",
-  //     background: "#333",
-  //     position: "absolute",
-  //     left: " 50%",
-  //     top: "20px",
-  //     animation: "tick 43200s infinite linear",
-  //     transformOrigin:'2px 100%'
-  //   },
-  //   min:{
-  //     height: "30px",
-  //     width: "4px",
-  //     background: "#333",
-  //     position: "absolute",
-  //     left: " 50%",
-  //     top: "40px",
-  //     animation: "tick 3600s infinite linear",
-  //     transformOrigin:'2px 100%'
-  //   },
-  //   sec:{
-  //     height: "60px",
-  //     width: "4px",
-  //     background: "#333",
-  //     position: "absolute",
-  //     left: " 50%",
-  //     top: "80px",
-  //     animation: "tick 60s infinite linear",
-  //     transformOrigin:'2px 100%'
-  //   },
-}));
 
 function handleClick(event) {
   event.preventDefault();
@@ -97,26 +54,26 @@ const ColorButton2 = withStyles((theme) => ({
 
 const LandingSearch = (props) => {
   console.log(props);
-  const classes = useStyles();
+//   const classes = useStyles();
   const { id } = useParams();
   return (
     <>
       <div>
         <Toolbar>
           <Breadcrumbs aria-label="breadcrumb">
-            <Link color="inherit" href="/" onClick={handleClick}>
+            <Link color="inherit" to="/" onClick={handleClick}>
               SuperBolter
             </Link>
             <Link
               color="inherit"
-              href="/getting-started/installation/"
+              to="/"
               onClick={handleClick}
             >
               My Home
             </Link>
             <Link
               color="textPrimary"
-              href="/components/breadcrumbs/"
+              to="/components/breadcrumbs/"
               onClick={handleClick}
               aria-current="page"
             >

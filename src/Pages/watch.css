@@ -58,7 +58,7 @@
   background: #E5E5E5;
   padding: 10px 0px;
   border-radius: 8px;
-  margin: 20px 0px;
+  margin: 20px 0px !important;
 }
 .box-content p{
     padding: 0px 12px;
